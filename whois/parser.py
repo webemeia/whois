@@ -2152,6 +2152,8 @@ class WhoisAi(WhoisEntry):
     def __init__(self, domain: str, text: str):
         if "not registered" in text:
             raise WhoisDomainNotFoundError(text)
+        elif "Domain not found" in text:
+            raise WhoisDomainNotFoundError(text)
         else:
             WhoisEntry.__init__(self, domain, text, self.regex)
 
