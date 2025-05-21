@@ -7,8 +7,8 @@ def read(filename):
 
 
 setuptools.setup(
-    name="python-whois",
-    version="1.0.0",
+    name="python-whois-am",
+    version="0.9.5+am.1",
     description="Whois querying and parsing of domain registration information.",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -22,9 +22,9 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
     ],
     keywords="whois, python",
-    author="Richard Penman",
-    author_email="richard.penman@gmail.com",
-    url="https://github.com/richardpenman/whois",
+    author="Amine nd",
+    author_email="am.js.web@gmail.com",
+    url="https://github.com/webemeia/whois",
     license="MIT",
     packages=["whois"],
     package_dir={"whois": "whois"},
