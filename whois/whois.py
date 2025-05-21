@@ -239,6 +239,8 @@ class NICClient:
 
             nhost = None
             response_str = response.decode("utf-8", "replace")
+            if response_str.strip().startswith("Domain not found."):
+                return "Domain Not Found"
             if 'with "=xxx"' in response_str:
                 return self.whois(query, hostname, flags, True, quiet=quiet, ignore_socket_errors=ignore_socket_errors)
             if flags & NICClient.WHOIS_RECURSE and nhost is None:
